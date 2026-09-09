@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - SecureBank</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">SecureBank</div>
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="transactions.html">Transactions</a>
+      <a href="history.html">History</a>
+      <button class="btn-logout" onclick="handleLogout()">Logout</button>
+    </div>
+  </nav>
+
+  <div class="dashboard-container">
+    <h1>Welcome, <span id="welcomeName"></span> 👋</h1>
+
+    <div class="card balance-card">
+      <p>Current Balance</p>
+      <div class="balance-amount" id="accBalance">$0.00</div>
+    </div>
+
+    <div class="card account-info">
+      <h2>Account Details</h2>
+      <p><strong>Account Number:</strong> <span id="accNumber"></span></p>
+      <p><strong>Email:</strong> <span id="accEmail"></span></p>
+    </div>
+
+    <div class="quick-actions">
+      <a href="transactions.html">💰 Deposit / Withdraw</a>
+      <a href="transactions.html">🔁 Transfer Funds</a>
+      <a href="history.html">📜 View History</a>
+    </div>
+
+    <div class="card">
+      <h2>Recent Transactions</h2>
+      <ul id="recentTransactions"></ul>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
